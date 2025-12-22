@@ -19,3 +19,17 @@ if [ -e ~/.zshrc ]; then
 fi
 
 ln .zshrc ~/.zshrc
+
+if [ -e ~/.config/zed/settings.json ]; then
+    rm ~/.config/zed/settings.json 
+else
+    mkdir -p ~/.config/zed/
+fi
+
+ln zed_settings.json ~/.config/zed/settings.json 
+
+if [ -e ~/.config/zed/keymap.json ]; then
+    rm ~/.config/zed/keymap.json 
+fi
+
+ln zed_keymap.json ~/.config/zed/keymap.json 

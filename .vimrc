@@ -123,6 +123,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'romainaugier/vim-ty'
 
 call plug#end()
 
@@ -155,3 +156,15 @@ nnoremap <C-F> :Files<CR>
 " italics in tmux
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
+
+" vim-lsp
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_signs_enabled = 1
+let g:lsp_diagnostics_virtual_text_enabled = 1
+let g:lsp_signs_error = {'text': 'X'}
+let g:lsp_signs_warning = {'text': '!'}
+let g:lsp_signs_hint = {'text': '*'}
+
+" vim-ty
+let g:ty_workspace_settings = {'diagnosticMode': 'workspace'}
