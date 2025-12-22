@@ -134,11 +134,9 @@ set t_ut=
 let g:lightline = {
             \ 'active': {
             \    'left': [ [ 'mode', 'paste' ],
-            \              [ 'filename', 'modified' ]
+            \              [ 'filename', 'modified' ] ]
             \ }
             \ }
-
-call lightline#coc#register()
 
 " syntax highlighting
 let g:python_highlight_all = 1
