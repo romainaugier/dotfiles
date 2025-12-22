@@ -122,11 +122,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'prabirshrestha/vim-lsp'
 
 call plug#end()
 
 " color scheme
 let g:gruvbox_italics=1
+colorscheme gruvbox
 
 set t_Co=256
 set t_ut=
@@ -137,6 +139,8 @@ let g:lightline = {
             \              [ 'filename', 'modified' ] ]
             \ }
             \ }
+
+let g:lightline.colorscheme = 'gruvbox'
 
 " syntax highlighting
 let g:python_highlight_all = 1
