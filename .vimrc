@@ -127,7 +127,7 @@ Plug 'romainaugier/vim-gruvbox'
 call plug#end()
 
 " color scheme
-set background=light
+set background=dark
 let g:gruvbox_italics=1
 colorscheme gruvbox
 
