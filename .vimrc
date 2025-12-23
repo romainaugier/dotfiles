@@ -120,14 +120,14 @@ Plug 'tpope/vim-abolish'
 Plug 'kkoomen/vim-doge', { 'tag' : 'v3.10.0', 'do': { -> doge#install() } }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'romainaugier/vim-ty'
+Plug 'romainaugier/vim-gruvbox'
 
 call plug#end()
 
 " color scheme
+set background=light
 let g:gruvbox_italics=1
 colorscheme gruvbox
 
@@ -140,8 +140,6 @@ let g:lightline = {
             \              [ 'filename', 'modified' ] ]
             \ }
             \ }
-
-let g:lightline.colorscheme = 'gruvbox'
 
 " syntax highlighting
 let g:python_highlight_all = 1
