@@ -117,12 +117,12 @@ function enable_gcc_13 () {
 	export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-13/root/usr/lib64:$LD_LIBRARY_PATH
 }
 
-export -f enable_gcc_13
+export enable_gcc_13
 
 function enable_python_314 () {
 	export PATH=/home/donromano/Documents/Python/3.14.0/bin${PATH:+:${PATH}}
 }
 
-export -f enable_python_314
+export enable_python_314
 
 . "$HOME/.cargo/env"
