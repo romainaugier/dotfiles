@@ -102,4 +102,27 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
 alias cls=clear
+alias tmux="TERM=screen-256color tmux"
+
+function enable_gcc_13 () {
+	scl enable gcc-toolset-13 bash
+	export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-13/root/usr/lib64:$LD_LIBRARY_PATH
+}
+
+export -f enable_gcc_13
+
+function enable_python_314 () {
+	export PATH=/home/donromano/Documents/Python/3.14.0/bin${PATH:+:${PATH}}
+}
+
+export -f enable_python_314
+
+. "$HOME/.cargo/env"
