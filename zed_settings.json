@@ -21,12 +21,17 @@
     "asm-intel-x86-generic": ["*.asm"]
   },
   "wrap_guides": [80],
-  "languages": {
-    "Python": {
-      "language_servers": [
-        "ty",
-        "!basedpyright"
-      ]
+  "formatter": {
+    "external": {
+      "command": "clang-format",
+      "arguments": ["--style=file", "--assume-filename={buffer_path}"]
+    }
+  },
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "arguments": ["--header-insertion=never"]
+      }
     }
   }
 }
