@@ -126,3 +126,9 @@ function enable_python_314 () {
 export enable_python_314
 
 . "$HOME/.cargo/env"
+
+function enable_autoconf_271() {
+	export PATH=/opt/rh/autoconf271/bin${PATH:+:${PATH}}
+}
+
+export enable_autoconf_271
