@@ -37,6 +37,9 @@
           "arguments": ["--style=file", "--assume-filename={buffer_path}"]
         }
       }
+    },
+    "Python": {
+      "language_servers": ["ty", "!basedpyright"]
     }
   },
   "lsp": {
