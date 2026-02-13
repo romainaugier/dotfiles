@@ -113,8 +113,10 @@ alias cls=clear
 alias tmux="TERM=screen-256color tmux"
 
 function enable_gcc_13 () {
-	scl enable gcc-toolset-13 bash
-	export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-13/root/usr/lib64:$LD_LIBRARY_PATH
+	# scl enable gcc-toolset-13 bash
+	# export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-13/root/usr/lib64:$LD_LIBRARY_PATH
+	source /opt/rh/gcc-toolset-13/enable
+	source ~/.zshrc
 }
 
 export enable_gcc_13
