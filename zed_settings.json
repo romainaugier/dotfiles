@@ -20,7 +20,7 @@
   "file_types": {
     "asm-intel-x86-generic": ["*.asm"]
   },
-  "wrap_guides": [80],
+  "wrap_guides": [120],
   "languages": {
     "C":{
       "formatter": {
