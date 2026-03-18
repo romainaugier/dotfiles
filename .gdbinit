@@ -1,1 +1,1 @@
-source ~/gdbui.py
+source ~/.gdbui.py
