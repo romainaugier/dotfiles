@@ -16,6 +16,7 @@
   {
     "context": "Workspace",
     "bindings": {
+      "ctrl-e": "workspace::ToggleRightDock",
       "ctrl-f": "file_finder::Toggle",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
@@ -26,24 +27,13 @@
   {
     "context": "Editor",
     "bindings": {
+      "ctrl-e": "workspace::ToggleRightDock",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-left": "pane::GoBack",
       "ctrl-right": "pane::GoForward"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-e": "workspace::ToggleRightDock"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "ctrl-e": "workspace::ToggleRightDock"
     }
   }
 ]
