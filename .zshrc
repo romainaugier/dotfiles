@@ -129,7 +129,9 @@ function enable_python_314 () {
 	export PATH=/home/donromano/Documents/Python/3.14.0/bin${PATH:+:${PATH}}
 }
 
-export enable_python_314
+if [ "$PLATFORM" = "Linux" ]; then
+	export enable_python_314
+fi
 
 . "$HOME/.cargo/env"
 
