@@ -103,10 +103,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
+PLATFORM="$(uname -s)"
+
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+
 export PATH
 
 alias cls=clear
@@ -119,7 +121,9 @@ function enable_gcc_13 () {
 	source ~/.zshrc
 }
 
-export enable_gcc_13
+if [ "$PLATFORM" = "Linux" ]; then
+	export enable_gcc_13
+fi
 
 function enable_python_314 () {
 	export PATH=/home/donromano/Documents/Python/3.14.0/bin${PATH:+:${PATH}}
@@ -133,4 +137,6 @@ function enable_autoconf_271() {
 	export PATH=/opt/rh/autoconf271/bin${PATH:+:${PATH}}
 }
 
-export enable_autoconf_271
+if [ "$PLATFORM" = "Linux" ]; then
+	export enable_autoconf_271
+fi
