@@ -133,7 +133,11 @@ if [ "$PLATFORM" = "Linux" ]; then
 	export enable_python_314
 fi
 
-. "$HOME/.cargo/env"
+CARGO_ENV_PATH=$HOME/.cargo/env
+
+if [ -d $CARGO_ENV_PATH ]; then
+    . $CARGO_ENV_PATH
+fi
 
 function enable_autoconf_271() {
 	export PATH=/opt/rh/autoconf271/bin${PATH:+:${PATH}}
